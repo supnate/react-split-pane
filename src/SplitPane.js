@@ -221,7 +221,6 @@ class SplitPane extends Component {
       if (value === undefined) {
         return DEFAULT_PANE_SIZE;
       }
-
       return String(value);
     });
   }
@@ -370,7 +369,7 @@ class SplitPane extends Component {
       let pane;
       const resizerIndex = idx - 1;
       // const isPane = child.type === Pane;
-      const isPane = child.type && child.type.displayName === "Pane"; // simple check
+      const isPane = true; // only allow Pane inside SplitPane for Rekit Studio. child.type && child.type.displayName === "Pane"; // simple check
       const paneProps = {
         index: idx,
         "data-type": "Pane",
